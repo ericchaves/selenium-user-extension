@@ -1,0 +1,22 @@
+{
+  "name": "ide-tools",
+  "version": "0.0.0",
+  "authors": [
+    "Eric Chaves <eric@craftti.com.br>"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jasmine": "~2.2.1"
+  }
+}
