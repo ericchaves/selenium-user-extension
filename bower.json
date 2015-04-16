@@ -18,5 +18,6 @@
   ],
   "dependencies": {
     "jasmine": "~2.2.1"
-  }
+  },
+  "devDependencies": {}
 }
