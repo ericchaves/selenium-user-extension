@@ -10,10 +10,31 @@
     <script type="text/javascript" src="components/jasmine/lib/jasmine-core/jasmine.js"></script>
     <script type="text/javascript" src="components/jasmine/lib/jasmine-core/jasmine-html.js"></script>
     <script type="text/javascript" src="components/jasmine/lib/jasmine-core/boot.js"></script>
+    <script type="text/javascript" src="components/sinonjs/sinon.js"></script>
 </head>
 <body>
-
+    <script type="text/javascript">
+      /* setup mocking so we can define and test custom selenium commands */
+      Selenium = function(){
+        window.storedVars = {};
+        this.stubs = ['findElement','replaceText'];
+        this.stubs.forEach(function(name){
+          this[name] = sinon.stub();
+        }.bind(this));
+      };
+      Selenium.prototype.page = function(){ return this; };
+      Selenium.prototype.reset = function(){
+        window.storedVars = {};
+        this.stubs.forEach(function(name){
+          this[name] = sinon.stub();
+        }.bind(this));
+      };
+      browserBot = new Selenium();
+    </script>
     <script type="text/javascript" src="user-extensions.js"></script>  
-    <script type="text/javascript" src="specs.js"></script>
+    <script type="text/javascript" src="specs/commands-specs.js"></script>
+    <script type="text/javascript" src="specs/creditCard-specs.js"></script>
+    <script type="text/javascript" src="specs/documents-specs.js"></script>
+    <script type="text/javascript" src="specs/banking-specs.js"></script>
 </body>
 </html>

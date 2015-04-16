@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head profile="http://selenium-ide.openqa.org/profiles/test-case">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="selenium.base" href="file:///Users/ericchaves/Projects/selenium/ide-tools/" />
+<title>test-case</title>
+</head>
+<body>
+<table cellpadding="1" cellspacing="1" border="1">
+<thead>
+<tr><td rowspan="1" colspan="3">test-case</td></tr>
+</thead><tbody>
+<!--Para gerar CPF sem formatação deixe o campo Value em branco-->
+<tr>
+	<td>typeCPF</td>
+	<td>id=cpf</td>
+	<td></td>
+</tr>
+<!--Para indicar o tipo de cartão, no campo Value informe a bandeira (VISA, MASTERCARD, AMEX ou DISCOVERY)-->
+<tr>
+	<td>typeCreditCard</td>
+	<td>id=cartao</td>
+	<td>VISA</td>
+</tr>
+<!--Antes de utilizer os métodos typeStoredXXXX é preciso rodar storeBankingAccount para gerar o objeto com dados bancário.-->
+<!--Bancos suportados: 1, 33, 104, 237, 341, 356, 399, 745-->
+<tr>
+	<td>storeBankingAccount</td>
+	<td>1</td>
+	<td>minhaConta</td>
+</tr>
+<tr>
+	<td>typeStoredAgencia</td>
+	<td>id=agencia</td>
+	<td>minhaConta</td>
+</tr>
+<tr>
+	<td>typeStoredDigitoAgencia</td>
+	<td>id=digitoAgencia</td>
+	<td>minhaConta</td>
+</tr>
+<tr>
+	<td>typeStoredConta</td>
+	<td>id=conta</td>
+	<td>minhaConta</td>
+</tr>
+<tr>
+	<td>typeStoredDigitoConta</td>
+	<td>id=digitoConta</td>
+	<td>minhaConta</td>
+</tr>
+</tbody></table>
+</body>
+</html>
